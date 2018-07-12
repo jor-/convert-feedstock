@@ -1,0 +1,42 @@
+{% set DATA = load_setup_py_data() %}
+{% set BRANCH = 'develop' %}
+
+package:
+    name: convert
+    version: {{ DATA.get('version')}}
+
+source:
+    git_url: https://github.com/jor-/convert
+    git_rev: {{ BRANCH }}
+
+build:
+    number: 0
+    noarch: python
+
+requirements:
+    build:
+        - setuptools >=0.8
+        - python >=3.6
+        - numpy >=1.7
+    run:
+        - python >=3.6
+        - numpy >=1.7
+
+test:
+    requires:
+        - nose >=1.0
+        - pytest
+    source_files:
+        - convert
+    commands:
+        - pytest
+
+about:
+    home: {{ DATA.get('url') }}
+    summary: {{ DATA.get('description') }}
+    license: {{ DATA.get('license') }}
+    license_file: LICENSE.txt
+
+extra:
+    maintainers:
+        - {{ DATA.get('author') }}
