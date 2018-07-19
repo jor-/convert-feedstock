@@ -2,11 +2,11 @@
 {% set BRANCH = 'develop' %}
 
 package:
-    name: convert
+    name: io-convert
     version: {{ DATA.get('version')}}
 
 source:
-    git_url: https://github.com/jor-/convert
+    git_url: https://github.com/jor-/io-convert
     git_rev: {{ BRANCH }}
 
 build:
