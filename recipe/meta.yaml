@@ -18,9 +18,11 @@ requirements:
         - setuptools >=0.8
         - python >=3.6
         - numpy >=1.7
+        - scipy >=0.10
     run:
         - python >=3.6
         - numpy >=1.7
+        - scipy >=0.10
 
 test:
     requires:
