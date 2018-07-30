@@ -17,11 +17,11 @@ requirements:
     build:
         - setuptools >=0.8
         - python >=3.6
-        - numpy >=1.7
+        - numpy >=1.15
         - scipy >=0.10
     run:
         - python >=3.6
-        - numpy >=1.7
+        - numpy >=1.15
         - scipy >=0.10
 
 test:
