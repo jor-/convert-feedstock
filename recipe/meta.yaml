@@ -14,6 +14,8 @@ build:
     noarch: python
 
 requirements:
+    build:
+        - git
     host:
         - setuptools >=0.8
         - pip >=10
